@@ -9,13 +9,19 @@
     
     <script>
       function get_new_images() {
-        document.getElementById("demo").innerHTML = "Paragraph changed.";
+        get_new_hat();
+        get_new_glasses();
       }
+
       function get_new_hat() {
-        document.getElementById("demo").innerHTML = "Paragraph changed.";
+        
+        var random_number = Math.floor(Math.random() * 6);
+        var new_image_path = 'img/hut' + random_number + '.png';
+        document.getElementById("hat_image").src = new_image_path;
       }
+
       function get_new_glasses() {
-        document.getElementById("demo").innerHTML = "Paragraph changed.";
+        document.getElementById("glasses_image").src = "Paragraph changed.";
       }
     </script>
   </head>
@@ -24,8 +30,8 @@
 	  <h1>Bonobox</h1>
 	  <p>spielerisch Reflektieren</p>
 	  
-	  <button type="button">Würfeln...</button> 
-  	  <img id="hut_image" src="img/hut1.png" alt="Hut">
-	  <img id="brille_image" src="img/brille0.png" alt="Brille">
+	  <button type="button" onclick="get_new_hat()">Würfeln...</button> 
+  	  <img id="hat_image" src="img/hut1.png" alt="Hut">
+	  <img id="glasses_image" src="img/brille0.png" alt="Brille">
   </body>
 </html>
