@@ -25,14 +25,16 @@
 
       function get_new_hat() {
         var random_number = getRandomInt(0,6);
-        var new_image_path = 'img/hut' + random_number + '.png';
-        document.getElementById("hat_image").src = new_image_path;
+        var new_image_path_hat = 'img/hut' + random_number + '.png';
+        console.log(new_image_path_hat);
+        document.getElementById("hat_image").src = new_image_path_hat;
       }
 
       function get_new_glasses() {
         var random_number = getRandomInt(0,5);
-        var new_image_path = 'img/brille' + random_number + '.png';
-        document.getElementById("glasses_image").src = new_image_path;
+        var new_image_path_glasses = 'img/brille' + random_number + '.png';
+        console.log(new_image_path_glasses);
+        document.getElementById("glasses_image").src = new_image_path_glasses;
       }
 
       window.onload = get_new_images();
