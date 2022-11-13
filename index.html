@@ -24,14 +24,14 @@
       }
 
       function get_new_hat() {
-        var random_number = getRandomInt(0,6);
+        var random_number = getRandomInt(0,5);
         var new_image_path_hat = 'img/hut' + random_number + '.png';
         console.log(new_image_path_hat);
         document.getElementById("hat_image").src = new_image_path_hat;
       }
 
       function get_new_glasses() {
-        var random_number = getRandomInt(0,5);
+        var random_number = getRandomInt(0,4);
         var new_image_path_glasses = 'img/brille' + random_number + '.png';
         console.log(new_image_path_glasses);
         document.getElementById("glasses_image").src = new_image_path_glasses;
@@ -43,12 +43,13 @@
 
     <div class="canvas">
 
-      <div class ="title">
-        <h1>Bonobox</h1>
-        <p>spielerisch Reflektieren</p>
-      </div>
-
       <div class="main">
+
+        <div class ="title">
+          <h1>Bonobox</h1>
+          <p>spielerisch Reflektieren</p>
+        </div>
+
         <img id="hat_image" src="img/hut1.png" alt="Hut">
         <img id="glasses_image" src="img/brille0.png" alt="Brille">
     
@@ -57,8 +58,9 @@
           <button type="button" onclick="get_new_images()">Alles neu...</button> 
           <button type="button" onclick="get_new_glasses()">Neue Brille...</button> 
         </div>
+
       </div>
-      
+
     </div>
     
   </body>
