@@ -34,13 +34,21 @@
         var new_image_path = 'img/brille' + random_number + '.png';
         document.getElementById("glasses_image").src = new_image_path;
       }
+
+      window.onload = get_new_images();
+      
     </script>
     
 	  <h1>Bonobox</h1>
 	  <p>spielerisch Reflektieren</p>
 	  
-	  <button type="button" onclick="get_new_hat()">Würfeln...</button> 
-  	  <img id="hat_image" src="img/hut1.png" alt="Hut">
+  	<img id="hat_image" src="img/hut1.png" alt="Hut">
 	  <img id="glasses_image" src="img/brille0.png" alt="Brille">
+
+    <div id="buttons">
+      <button type="button" onclick="get_new_hat()">Neuer Hut...</button> 
+      <button type="button" onclick="get_new_images()">Neuer Hut...</button> 
+      <button type="button" onclick="get_new_glasses()">Neuer Hut...</button> 
+    </div>
   </body>
 </html>
