@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bonobox</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -46,17 +47,18 @@
 
       <div class="title">
         <h1>Bonobox</h1>
-        <p>spielerisch Reflektieren</p>
+        <h4>spielerisch Reflektieren</h4>
       </div>
-
-      <img id="hat_image" src="img/hut1.png" alt="Hut">
-      <img id="glasses_image" src="img/brille0.png" alt="Brille">
-
+      
       <div class="buttons">
         <button type="button" onclick="get_new_hat()">Neuer Hut...</button>
         <button type="button" onclick="get_new_images()">Alles neu...</button>
         <button type="button" onclick="get_new_glasses()">Neue Brille...</button>
       </div>
+      
+      <img id="hat_image" class="hat_image" src="img/hut1.png" alt="Hut">
+      <img id="glasses_image" class="glasses_image" src="img/brille0.png" alt="Brille">
+
     </div>
   </div>
 </body>
