@@ -28,6 +28,8 @@
           var random_number = getRandomInt(0,5);
         } while (random_number != old_hat);
 
+        old_hat = random_number;
+
         var new_image_path_hat = 'img/hut' + random_number + '.png';
         console.log(new_image_path_hat);
         document.getElementById("hat_image").src = new_image_path_hat;
@@ -38,6 +40,8 @@
           var random_number = getRandomInt(0,4);
         } while (random_number != old_glasses);
 
+        old_glasses = random_number;
+        
         var new_image_path_glasses = 'img/brille' + random_number + '.png';
         console.log(new_image_path_glasses);
         document.getElementById("glasses_image").src = new_image_path_glasses;
