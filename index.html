@@ -24,11 +24,8 @@
       }
 
       function get_new_hat() {
-        do {
-          var random_number = getRandomInt(0,5);
-        } while (random_number != old_hat);
-
-        old_hat = random_number;
+        
+        var random_number = getRandomInt(0,5);
 
         var new_image_path_hat = 'img/hut' + random_number + '.png';
         console.log(new_image_path_hat);
@@ -36,19 +33,11 @@
       }
 
       function get_new_glasses() {
-        do{
-          var random_number = getRandomInt(0,4);
-        } while (random_number != old_glasses);
-
-        old_glasses = random_number;
-        
+        var random_number = getRandomInt(0,4);
         var new_image_path_glasses = 'img/brille' + random_number + '.png';
         console.log(new_image_path_glasses);
         document.getElementById("glasses_image").src = new_image_path_glasses;
       }
-
-      let old_hat = 0;
-      let old_glasses = 0;
 
     </script>
 
