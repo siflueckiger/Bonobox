@@ -1,67 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bonobox</title>
-    <link rel="stylesheet" href="style.css">
-    
 
-  </head>
-  <body>
-    <script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bonobox</title>
+</head>
 
-      function getRandomInt(min, max) {
-          min = Math.ceil(min);
-          max = Math.floor(max);
-          return Math.floor(Math.random() * (max - min + 1)) + min;
-      }
+<body>
+  <script>
 
-      function get_new_images() {
-        get_new_hat();
-        get_new_glasses();
-      }
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
-      function get_new_hat() {
-        
-        var random_number = getRandomInt(0,5);
+    function get_new_images() {
+      get_new_hat();
+      get_new_glasses();
+    }
 
-        var new_image_path_hat = 'img/hut' + random_number + '.png';
-        console.log(new_image_path_hat);
-        document.getElementById("hat_image").src = new_image_path_hat;
-      }
+    function get_new_hat() {
 
-      function get_new_glasses() {
-        var random_number = getRandomInt(0,4);
-        var new_image_path_glasses = 'img/brille' + random_number + '.png';
-        console.log(new_image_path_glasses);
-        document.getElementById("glasses_image").src = new_image_path_glasses;
-      }
+      var random_number = getRandomInt(0, 5);
 
-    </script>
+      var new_image_path_hat = 'img/hut' + random_number + '.png';
+      console.log(new_image_path_hat);
+      document.getElementById("hat_image").src = new_image_path_hat;
+    }
 
-    <div class="canvas">
+    function get_new_glasses() {
+      var random_number = getRandomInt(0, 4);
+      var new_image_path_glasses = 'img/brille' + random_number + '.png';
+      console.log(new_image_path_glasses);
+      document.getElementById("glasses_image").src = new_image_path_glasses;
+    }
 
-      <div class="main">
+  </script>
 
-        <div class ="title">
-          <h1>Bonobox</h1>
-          <p>spielerisch Reflektieren</p>
-        </div>
+  <div class="canvas">
 
-        <img id="hat_image" src="img/hut1.png" alt="Hut">
-        <img id="glasses_image" src="img/brille0.png" alt="Brille">
-    
-        <div class="buttons">
-          <button type="button" onclick="get_new_hat()">Neuer Hut...</button> 
-          <button type="button" onclick="get_new_images()">Alles neu...</button> 
-          <button type="button" onclick="get_new_glasses()">Neue Brille...</button> 
-        </div>
+    <div class="main">
 
+      <div class="title">
+        <h1>Bonobox</h1>
+        <p>spielerisch Reflektieren</p>
       </div>
 
+      <img id="hat_image" src="img/hut1.png" alt="Hut">
+      <img id="glasses_image" src="img/brille0.png" alt="Brille">
+
+      <div class="buttons">
+        <button type="button" onclick="get_new_hat()">Neuer Hut...</button>
+        <button type="button" onclick="get_new_images()">Alles neu...</button>
+        <button type="button" onclick="get_new_glasses()">Neue Brille...</button>
+      </div>
     </div>
-    
-  </body>
+  </div>
+</body>
+
 </html>
