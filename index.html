@@ -11,20 +11,28 @@
   </head>
   <body>
     <script>
+      function getRandomInt(min, max) {
+          min = Math.ceil(min);
+          max = Math.floor(max);
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+
       function get_new_images() {
         get_new_hat();
         get_new_glasses();
       }
 
       function get_new_hat() {
-        
-        var random_number = Math.floor(Math.random() * 6);
+        var random_number = getRanomInt(0,6);
         var new_image_path = 'img/hut' + random_number + '.png';
         document.getElementById("hat_image").src = new_image_path;
       }
 
       function get_new_glasses() {
-        document.getElementById("glasses_image").src = "Paragraph changed.";
+        var random_number = getRanomInt(0,5);
+        var new_image_path = 'img/brille' + random_number + '.png';
+        document.getElementById("glasses_image").src = new_image_path;
       }
     </script>
     
