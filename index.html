@@ -40,17 +40,26 @@
       window.onload = get_new_images();
 
     </script>
-    
-	  <h1>Bonobox</h1>
-	  <p>spielerisch Reflektieren</p>
-	  
-  	<img id="hat_image" src="img/hut1.png" alt="Hut">
-	  <img id="glasses_image" src="img/brille0.png" alt="Brille">
 
-    <div id="buttons">
-      <button type="button" onclick="get_new_hat()">Neuer Hut...</button> 
-      <button type="button" onclick="get_new_images()">Alles neu...</button> 
-      <button type="button" onclick="get_new_glasses()">Neue Brille...</button> 
+    <div class="canvas">
+
+      <div class ="title">
+        <h1>Bonobox</h1>
+        <p>spielerisch Reflektieren</p>
+      </div>
+
+      <div class="main">
+        <img id="hat_image" src="img/hut1.png" alt="Hut">
+        <img id="glasses_image" src="img/brille0.png" alt="Brille">
+    
+        <div class="buttons">
+          <button type="button" onclick="get_new_hat()">Neuer Hut...</button> 
+          <button type="button" onclick="get_new_images()">Alles neu...</button> 
+          <button type="button" onclick="get_new_glasses()">Neue Brille...</button> 
+        </div>
+      </div>
+      
     </div>
+    
   </body>
 </html>
