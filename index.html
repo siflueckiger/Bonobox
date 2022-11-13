@@ -11,12 +11,12 @@
   </head>
   <body>
     <script>
+
       function getRandomInt(min, max) {
           min = Math.ceil(min);
           max = Math.floor(max);
           return Math.floor(Math.random() * (max - min + 1)) + min;
       }
-
 
       function get_new_images() {
         get_new_hat();
@@ -24,20 +24,27 @@
       }
 
       function get_new_hat() {
-        var random_number = getRandomInt(0,5);
+        do {
+          var random_number = getRandomInt(0,5);
+        } while (random_number != old_hat);
+
         var new_image_path_hat = 'img/hut' + random_number + '.png';
         console.log(new_image_path_hat);
         document.getElementById("hat_image").src = new_image_path_hat;
       }
 
       function get_new_glasses() {
-        var random_number = getRandomInt(0,4);
+        do{
+          var random_number = getRandomInt(0,4);
+        } while (random_number != old_glasses);
+
         var new_image_path_glasses = 'img/brille' + random_number + '.png';
         console.log(new_image_path_glasses);
         document.getElementById("glasses_image").src = new_image_path_glasses;
       }
 
-      window.onload = get_new_images();
+      let old_hat = 0;
+      let old_glasses = 0;
 
     </script>
 
