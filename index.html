@@ -17,6 +17,9 @@
 <body>
   <script>
 
+    var actual_image_path_glasses = 0;
+    var actual_image_path_hat = 0;
+
     function getRandomInt(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
@@ -29,24 +32,26 @@
     }
 
     function get_new_hat() {
-
       var random_number = getRandomInt(0, 5);
 
-      var new_image_path_hat = 'img/hut' + random_number + '.png';
-      console.log(new_image_path_hat);
-      document.getElementById("hat_image").src = new_image_path_hat;
+      var actual_image_path_hat = 'img/hut' + random_number + '.png';
+      console.log(actual_image_path_hat);
+      document.getElementById("hat_image").src = actual_image_path_hat;
     }
 
     function get_new_glasses() {
       var random_number = getRandomInt(0, 4);
-      var new_image_path_glasses = 'img/brille' + random_number + '.png';
-      console.log(new_image_path_glasses);
-      document.getElementById("glasses_image").src = new_image_path_glasses;
+      var actual_image_path_glasses = 'img/brille' + random_number + '.png';
+      console.log(actual_image_path_glasses);
+      document.getElementById("glasses_image").src = actual_image_path_glasses;
     }
 
   </script>
 
   <main class="container">
+    <h1>Bonobox -spielerisch Reflektieren</h1>
+    <p>Klicke auf die Bilder, um diese auszutauschen oder klicke unten auf den Knopf <i>würfeln</i> um beide Bilder
+      auzutauschen.</p>
 
     <section id="bilder">
       <div class="grid">
@@ -54,9 +59,9 @@
         <img id="glasses_image" class="glasses_image" src="img/brille0.png" alt="Brille" onclick="get_new_glasses()">
       </div>
     </section>
-    
+
     <section id="wuerfeln">
-        <button class="box contrast" onclick="get_new_images()">Alles neu...</button>
+      <button class="box contrast" onclick="get_new_images()">würfeln</button>
     </section>
   </main>
 
