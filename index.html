@@ -48,17 +48,26 @@
 
   <main class="container">
 
-    <h1>Bonobox</h1>
-    <h4>spielerisch Reflektieren</h4>
+    <h1>
+      Bonobox - spielerisch Reflektieren
+    </h1>
     
-    <img id="hat_image" class="hat_image" src="img/hut1.png" alt="Hut">
-    <img id="glasses_image" class="glasses_image" src="img/brille0.png" alt="Brille">
+    <section id="bilder">
+      <div class="grid">
+        <img id="hat_image" class="hat_image" src="img/hut1.png" alt="Hut">
+        <img id="glasses_image" class="glasses_image" src="img/brille0.png" alt="Brille">
+      </div>
+    </section>
     
-    <button class="myButton" onclick="get_new_hat()">Neuer Hut...</button>
-    <button class="myButton" onclick="get_new_glasses()">Neue Brille...</button>
-    <button class="myButton" onclick="get_new_images()">Alles neu...</button>
-    
+    <section id="wuerfeln">
+      <div class="grid">
+        <button class="box contrast" onclick="get_new_hat()">Neuer Hut...</button>
+        <button class="box contrast" onclick="get_new_glasses()">Neue Brille...</button>
+        <button class="box contrast" onclick="get_new_images()">Alles neu...</button>
+      </div>
+    </section>
   </main>
+
 
 </body>
 
