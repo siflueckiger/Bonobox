@@ -32,26 +32,39 @@
     }
 
     function get_new_hat() {
-      var random_number = getRandomInt(0, 5);
+      for (let i = 0; i < 15; i++) {
+        setTimeout(function () {
+          var random_number = getRandomInt(0, 5);
 
-      var actual_image_path_hat = 'img/hut' + random_number + '.png';
-      console.log(actual_image_path_hat);
-      document.getElementById("hat_image").src = actual_image_path_hat;
+          var actual_image_path_hat = 'img/hut' + random_number + '.png';
+          document.getElementById("hat_image").src = actual_image_path_hat;
+        }, 50 * i)
+      }
     }
 
     function get_new_glasses() {
-      var random_number = getRandomInt(0, 4);
-      var actual_image_path_glasses = 'img/brille' + random_number + '.png';
-      console.log(actual_image_path_glasses);
-      document.getElementById("glasses_image").src = actual_image_path_glasses;
+      for (let i = 0; i < 15; i++) {
+        setTimeout(function () {
+          var random_number = getRandomInt(0, 4);
+          var actual_image_path_glasses = 'img/brille' + random_number + '.png';
+          document.getElementById("glasses_image").src = actual_image_path_glasses;
+        }, 50 * i)
+      }
     }
 
   </script>
 
   <main class="container">
-    <h1>Bonobox -spielerisch Reflektieren</h1>
-    <p>Klicke auf die Bilder, um diese auszutauschen oder klicke unten auf den Knopf <i>würfeln</i> um beide Bilder
+    <h3>Bonobox - spielerisch Reflektieren</h3>
+    <p>Klicke auf die einzelnen Bilder, um diese separat auszutauschen oder klicke unten auf den Knopf <i>würfeln</i> um beide Bilder
       auzutauschen.</p>
+
+      <div>
+        <a href="Spielanleitung_BONOBOX.pdf" target="_blank">Spielanleitung </a> 
+      </div>
+      <div>
+        <a href="Huete_DeBono.pdf" target="_blank">Erklärung zu den Hüten von De Bono</a> 
+      </div>
 
     <section id="bilder">
       <div class="grid">
