@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<html data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bonobox- spielerisch Reflektieren</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+  <script>
+
+    var actual_image_path_glasses = 0;
+    var actual_image_path_hat = 0;
+
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function get_new_images() {
+      get_new_hat();
+      get_new_glasses();
+    }
+
+    function get_new_hat() {
+      for (let i = 0; i < 15; i++) {
+        setTimeout(function () {
+          var random_number = getRandomInt(0, 5);
+
+          var actual_image_path_hat = 'img/hut' + random_number + '.png';
+          document.getElementById("hat_image").src = actual_image_path_hat;
+        }, 50 * i)
+      }
+    }
+
+    function get_new_glasses() {
+      for (let i = 0; i < 15; i++) {
+        setTimeout(function () {
+          var random_number = getRandomInt(0, 4);
+          var actual_image_path_glasses = 'img/brille' + random_number + '.png';
+          document.getElementById("glasses_image").src = actual_image_path_glasses;
+        }, 50 * i)
+      }
+    }
+
+  </script>
+
+  <main class="container">
+    <h3>Bonobox - spielerisch Reflektieren</h3>
+    <p>Klicke auf die einzelnen Bilder, um diese separat auszutauschen oder klicke unten auf den Knopf <i>würfeln</i> um beide Bilder
+      auzutauschen.</p>
+
+      <div>
+        <a href="Spielanleitung_BONOBOX.pdf" target="_blank">Spielanleitung </a> 
+      </div>
+      <div>
+        <a href="Huete_DeBono.pdf" target="_blank">Erklärung zu den Hüten von De Bono</a> 
+      </div>
+
+    <section id="bilder">
+      <div class="grid">
+        <img id="hat_image" class="hat_image" src="img/hut1.png" alt="Hut" onclick="get_new_hat()">
+        <img id="glasses_image" class="glasses_image" src="img/brille0.png" alt="Brille" onclick="get_new_glasses()">
+      </div>
+    </section>
+
+    <section id="wuerfeln">
+      <div class="grid">
+        <button class="" onclick="get_new_images()">würfeln</button>
+        <button class="secondary" onclick="get_new_hat()">neuer Hut</button>
+        <button class="secondary" onclick="get_new_glasses()">neue Brille</button>
+      </div>
+    </section>
+  </main>
+
+
+</body>
+
+</html>

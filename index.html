@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Bonobox- spielerisch Reflektieren</title>
+  <title>Online-PA-Tools der FHNW</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -15,72 +15,30 @@
 </head>
 
 <body>
-  <script>
 
-    var actual_image_path_glasses = 0;
-    var actual_image_path_hat = 0;
+    <script>
+        function openLinkinNewTab(url2page){
+            window.open(url2page,'_blank')
+        }
+    </script>
 
-    function getRandomInt(min, max) {
-      min = Math.ceil(min);
-      max = Math.floor(max);
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-    function get_new_images() {
-      get_new_hat();
-      get_new_glasses();
-    }
-
-    function get_new_hat() {
-      for (let i = 0; i < 15; i++) {
-        setTimeout(function () {
-          var random_number = getRandomInt(0, 5);
-
-          var actual_image_path_hat = 'img/hut' + random_number + '.png';
-          document.getElementById("hat_image").src = actual_image_path_hat;
-        }, 50 * i)
-      }
-    }
-
-    function get_new_glasses() {
-      for (let i = 0; i < 15; i++) {
-        setTimeout(function () {
-          var random_number = getRandomInt(0, 4);
-          var actual_image_path_glasses = 'img/brille' + random_number + '.png';
-          document.getElementById("glasses_image").src = actual_image_path_glasses;
-        }, 50 * i)
-      }
-    }
-
-  </script>
 
   <main class="container">
-    <h3>Bonobox - spielerisch Reflektieren</h3>
-    <p>Klicke auf die einzelnen Bilder, um diese separat auszutauschen oder klicke unten auf den Knopf <i>würfeln</i> um beide Bilder
-      auzutauschen.</p>
+    <h1>Online-PA-Tools der FHNW</h1>
+    
+    <p>Auf dieser Seite finden sie Werkzeuge für die Praxisausbildung von Studierenden der Sozialen Arbeit. 
+        Diese und weitere Werkzeuge wurden im Rahmen des <a href="https://www.fhnw.ch/de/weiterbildung/soziale-arbeit/praxisausbildende-in-der-sozialen-arbeit" target="_blank">Praxisausbildungskurses der Fachhochschule Nordwestschweiz (FHNW)</a> entwicklelt. 
+        Eine Auswahl wurde von <a href="mailto:si.flueckiger@gmail.com?subject=Online-PA-Tools FHNW">Simon Flückiger</a>, im Auftrag der FHNW, als Onlinetools umgesetzt.
+    </p>
 
-      <div>
-        <a href="Spielanleitung_BONOBOX.pdf" target="_blank">Spielanleitung </a> 
-      </div>
-      <div>
-        <a href="Huete_DeBono.pdf" target="_blank">Erklärung zu den Hüten von De Bono</a> 
-      </div>
+    <button onclick="openLinkinNewTab('bonobox.html')"> Bonobox - spielerisch Reflektieren</button>
+    <button onclick="alert('Da passiert nichts, da ich nur ein Beispielknopf bin.');">Werkzeug zwei</button>
+    <button onclick="alert('Da passiert nichts, da ich nur ein Beispielknopf bin.');">Werkzeug drei</button>
 
-    <section id="bilder">
-      <div class="grid">
-        <img id="hat_image" class="hat_image" src="img/hut1.png" alt="Hut" onclick="get_new_hat()">
-        <img id="glasses_image" class="glasses_image" src="img/brille0.png" alt="Brille" onclick="get_new_glasses()">
-      </div>
-    </section>
 
-    <section id="wuerfeln">
-      <div class="grid">
-        <button class="" onclick="get_new_images()">würfeln</button>
-        <button class="secondary" onclick="get_new_hat()">neuer Hut</button>
-        <button class="secondary" onclick="get_new_glasses()">neue Brille</button>
-      </div>
-    </section>
-  </main>
+    </div>
+
+</main>
 
 
 </body>
